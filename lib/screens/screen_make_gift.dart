@@ -43,17 +43,15 @@ class _MakeGiftScreenBody extends StatelessWidget {
         return Container(
           height: 250,
           color: Colors.white,
-          child: Expanded(
-            child: CupertinoDatePicker(
-              mode: CupertinoDatePickerMode.date,
-              initialDateTime: vm.selectedDate,
-              minimumDate: DateTime(2000),
-              maximumDate: DateTime(2100),
-              // locale: const Locale('ko', 'KR'),
-              onDateTimeChanged: (date) {
-                  vm.setDate(date);
-              },
-            ),
+          child: CupertinoDatePicker(
+            mode: CupertinoDatePickerMode.date,
+            initialDateTime: vm.selectedDate,
+            minimumDate: DateTime(2000),
+            maximumDate: DateTime(2100),
+            // locale: const Locale('ko', 'KR'),
+            onDateTimeChanged: (date) {
+                vm.setDate(date);
+            },
           ),
         );
       },
